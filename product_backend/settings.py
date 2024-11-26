@@ -33,7 +33,7 @@ ALLOWED_HOSTS = [
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:8080",
-    "https://marespradana.github.io"
+    "https://vue.marespradana.my.id"
 ]
 
 # Application definition
