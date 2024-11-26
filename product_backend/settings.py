@@ -26,10 +26,14 @@ SECRET_KEY = config('SECRET_KEY', default='django-insecure-%)9dv+n&$@j#x)vovp9ut
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=True, cast=bool)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "localhost",
+    "python.marespradana.my.id"
+]
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:8080"
+    "http://localhost:8080",
+    "https://marespradana.github.io"
 ]
 
 # Application definition
@@ -87,8 +91,8 @@ DATABASES = {
         'NAME': config('DB_NAME', default=''),
         'USER': config('DB_USER', default=''),
         'PASSWORD': config('DB_PASSWORD', default=''),
-        'HOST': 'localhost',
-        'PORT': '3307',
+        'HOST': config('DB_HOST', default=''),
+        'PORT': config('DB_PORT', default=''),
     }
 }
 
